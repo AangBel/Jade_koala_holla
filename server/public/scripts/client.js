@@ -60,7 +60,6 @@ function getKoalas() {
   })
     .then(function (response) {
       const koalaToReceive = response;
-
       for (let koala of koalaToReceive) {
         $("#viewKoalas").append(`
                 <tr>
