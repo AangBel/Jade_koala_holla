@@ -15,6 +15,11 @@ function setupClickListeners() {
     // get user input and put in an object
     // NOT WORKING YET :(
     // using a test object
+    let koalaNameInput = $('#nameIn').val();
+    let koalaAgeInput = $('#ageIn').val();
+    let koalaGenderInput= $('#genderIn').val();
+    let 
+
     let koalaToSend = {
       name: 'testName',
       age: 'testName',
