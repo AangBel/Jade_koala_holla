@@ -14,24 +14,24 @@ function setupClickListeners() {
     // get user input and put in an object
     // using a test object
     let koalaNameInput = $("#nameIn").val();
-    // console.log(koalaNameInput);
+    console.log(koalaNameInput);
     let koalaAgeInput = $("#ageIn").val();
-    // console.log(koalaAgeInput);
+    console.log(koalaAgeInput);
     let koalaGenderInput = $("#genderIn").val();
-    // console.log(koalaGenderInput);
+    console.log(koalaGenderInput);
     let koalaReady = $("#readyForTransferIn").val();
-    // console.log(koalaReady);
+    console.log(koalaReady);
     let koalaNotes = $("#notesIn").val();
-    // console.log(koalaNotes);
+    console.log(koalaNotes);
 
     let koalaToSend = {
       name: koalaNameInput,
       age: koalaAgeInput,
       gender: koalaGenderInput,
-      readyForTransfer: koalaReady,
+      ready_to_transfer: koalaReady,
       notes: koalaNotes,
     };
-    // console.log(koalaToSend);
+    console.log(koalaToSend);
 
     $.ajax({
       method: "POST",
@@ -40,13 +40,12 @@ function setupClickListeners() {
     })
       .then(function (response) {
         console.log(response);
-        getKoalas;
+        getKoalas();
       })
       .catch(function (error) {
         console.log("error in setup click listeners ajax post", error);
         alert("Error. Please try again later.");
       });
-    getKoalas();
   });
 }
 
@@ -60,14 +59,15 @@ function getKoalas() {
   })
     .then(function (response) {
       const koalaToReceive = response;
+      console.log('retrieved data', koalaToReceive)
       for (let koala of koalaToReceive) {
         $("#viewKoalas").append(`
                 <tr>
-                    <td>${koalaToReceive.name}</td>
-                    <td>${koalaToReceive.age}</td>
-                    <td>${koalaToReceive.gender}</td>
-                    <td>${koalaToReceive.ready}</td>
-                    <td>${koalaToReceive.notes}</td>
+                    <td>${koala.name}</td>
+                    <td>${koala.age}</td>
+                    <td>${koala.gender}</td>
+                    <td>${koala.ready_to_transfer}</td>
+                    <td>${koala.notes}</td>
                 </tr>
                 `);
       }
