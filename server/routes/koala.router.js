@@ -27,7 +27,7 @@ console.log('we are inside the get request')
 
 koalaRouter.post('/', (req, res) => {
     // Do this with a DB instead
-
+    console.log('we are inside the post ')
     let newKoalas = req.body
 
     console.log("res.body:", req.body);

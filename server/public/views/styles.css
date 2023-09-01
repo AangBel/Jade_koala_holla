@@ -1,0 +1,102 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a bluish background color to the body */
+body {
+    background-color: #f0f5ff;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header section */
+header {
+    background-color: #007acc;
+    color: black;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Style the page title */
+h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* Style the address */
+h3 {
+    font-size: 18px;
+}
+
+/* Style the icon */
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Style the "Add Koala" section */
+#addKoala {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the input fields and button */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#addButton {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Style the "All Koalas" section */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style table header cells */
+table th {
+    background-color: #007acc;
+    color: #fff;
+}
+
+/* Style table data cells */
+table td {
+    background-color: #f0f5ff;
+}
+
+/* Add some spacing between table rows */
+table tr:not(:first-child) {
+    margin-top: 10px;
+}
